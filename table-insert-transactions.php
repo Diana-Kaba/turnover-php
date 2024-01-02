@@ -12,9 +12,9 @@ $sql2 = "INSERT INTO `товарообіг` (`Найменування това�
 
 if (mysqli_query($conn, $sql1) && mysqli_query($conn, $sql2)) {
     mysqli_query($conn, "COMMIT");
-    echo "COMMIT";
+    echo "Транзацкція пройшла успішно.";
 } else {
     mysqli_query($conn, "ROLLBACK");
-    echo "ROLLBACK";
+    echo "Щось пішло не так... Відкат транзакції.";
 }
 mysqli_close($conn);
